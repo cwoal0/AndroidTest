@@ -8,6 +8,8 @@ import retrofit2.http.Path;
  */
 
 public interface WeatherService {
+    //将接口的URL补充完整
     @GET ("data/sk/{cityNumber}.html")
+    //向API传参数
     Call<WeatherResult> getResult(@Path("cityNumber")String cityNumber);
 }

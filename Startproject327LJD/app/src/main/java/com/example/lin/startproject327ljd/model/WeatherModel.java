@@ -15,6 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class WeatherModel implements WeatherIface{
+    private WeatherService service;
     private Retrofit retrofit;
     private static final String BASEURL = "http://www.weather.com.cn/";
 
@@ -42,6 +43,7 @@ public class WeatherModel implements WeatherIface{
                    listener.onFail("onResponse error");
            }
            public void onFailure(Call<WeatherResult> call, Throwable t) {
+               //调用监听事件接口的onFail方法
                    listener.onFail(t.toString());
            }
        });

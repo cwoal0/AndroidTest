@@ -10,6 +10,19 @@ public class WeatherInfo {
     private String WD;
     private String WS;
     private String SD;
+    private String WSE;
+    private String time;
+    private String njd;
+    private String cityid;
+
+    public String getCityid() {
+        return cityid;
+    }
+
+    public void setCityid(String cityid) {
+        this.cityid = cityid;
+    }
+
     public String getCity() {
         return city;
     }
@@ -50,6 +63,17 @@ public class WeatherInfo {
         this.SD = SD;
     }
 
+    public String getWSE() {return WSE;}
+
+    public void setWSE(String WSE) {this.WSE = WSE;}
+
+    public String getTime() {return time;}
+
+    public void setTime(String time) {this.time = time;}
+
+    public String getNjd() {return njd;}
+
+    public void setNjd(String njd) {this.njd = njd;}
 
 }
 //    private WeatherInfo weatherinfo;
